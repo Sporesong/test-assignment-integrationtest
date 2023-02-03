@@ -1,13 +1,13 @@
 import { IMovie } from "./models/Movie";
 import { getData } from "./services/movieservice";
 
-let movies: IMovie[] = [];
+export let movies: IMovie[] = [];
 
 export const init = () => {
   let form = document.getElementById("searchForm") as HTMLFormElement;
   form.addEventListener("submit", (e: SubmitEvent) => {
     e.preventDefault();
-    handleSubmit();
+    exports.handleSubmit();
   });
 };
 
@@ -28,7 +28,7 @@ export async function handleSubmit() {
     } else {
       exports.displayNoResult(container);
     }
-  } catch {
+  } catch(data: any) {
     exports.displayNoResult(container);
   }
 }
