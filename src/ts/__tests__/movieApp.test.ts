@@ -1,7 +1,6 @@
 /** 
  * @jest-environment jsdom 
  */
-import { IMovie } from "../models/Movie";
 import * as movieApp from "../movieApp";
 import * as movieservice from "../services/movieservice";
 import { testMovies } from "../services/__mocks__/movieService";
